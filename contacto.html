@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto </title>
+    
+</head> 
+<body>
+    <header>
+        <nav>
+           <a href="index.html">Portada</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+       
+    </header>
+    <div titulo>
+       <h1>Agenda tu Test Ride</h1>
+         <p>Visita nuestro showroom o escríbenos para coordinar una inspección técnica de la moto que buscas.</p>
+
+         <h2>Datos de contacto</h2>
+         <p><strong>Dirección del Showroom:</strong> Av. Circunvalar # 45 - 12 (Zona Comercial de Motores)</p>
+         <p><strong>Línea directa / WhatsApp:</strong> +57 300 123 4567</p>
+         <p><strong>Correo de ventas:</strong> contacto@apexmotors.com</p>
+         <p><strong>Horario de atención:</strong> Lunes a Sábado: 8:00 AM – 6:30 PM</p>
+
+         <h2>Contáctanos</h2>
+         <form>
+             <label for="nombre">Nombre completo</label>
+             <input type="text" id="nombre" name="nombre" required>
+
+             <label for="correo">Correo electrónico</label>
+             <input type="email" id="correo" name="correo" required>
+
+             <label for="telefono">Teléfono</label>
+             <input type="tel" id="telefono" name="telefono" required>
+
+             <div modelo>
+            <label for="modelo">Modelo de interés</label>
+             <select id="modelo" name="modelo" required>
+                 <option value="">Selecciona un modelo</option>
+                 <option value="MT-09">MT-09</option>
+                 <option value="Z1000">Z1000</option>
+                 <option value="S1000R">S1000R</option>
+                 <option value="Otro">Otro</option>
+             </select>
+             </div>
+
+             <label for="mensaje">Mensaje o consulta adicional</label>
+             <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+             <button type="submit">Enviar consulta</button>
+         </form>
+    </div>
+    <img src="contacto.jpeg" alt="moto" width="1000" height="800">
+
+</body>
+</html>
