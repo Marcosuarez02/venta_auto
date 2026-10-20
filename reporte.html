@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de novedades</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Portada</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="reporte.html" aria-current="page">Reportar novedad</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Registro de Novedades del Ambiente de Formación</h1>
+
+        <section aria-labelledby="privacidad">
+            <h2 id="privacidad">Aviso de privacidad</h2>
+            <p>
+                Los datos diligenciados en este formulario (nombre e información
+                de contacto) serán utilizados única y exclusivamente para
+                gestionar la reparación y seguimiento de los equipos o
+                mobiliario del ambiente de formación. No serán compartidos con
+                terceros.
+            </p>
+        </section>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <h2>Reportar una novedad</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+
+            <label for="telefono">Número de contacto</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+
+            <label for="ambiente">Ambiente de formación</label>
+            <input type="text" id="ambiente" name="ambiente" required>
+
+            <label for="tipo">Tipo de novedad</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="equipo">Equipo</option>
+                <option value="mobiliario">Mobiliario</option>
+                <option value="infraestructura">Infraestructura</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="descripcion">Descripción de la novedad</label>
+            <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+            <label for="evidencia">Evidencia (opcional)</label>
+            <input type="file" id="evidencia" name="evidencia" accept="image/*,.pdf">
+
+            <button type="submit">Enviar reporte</button>
+        </form>
+    </main>
+</body>
+</html>
