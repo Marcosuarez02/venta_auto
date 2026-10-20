@@ -34,35 +34,103 @@
         <form action="#" method="post" enctype="multipart/form-data">
             <h2>Reportar una novedad</h2>
 
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            <fieldset>
+                <legend>Datos del reportante</legend>
 
-            <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" autocomplete="email" required>
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    autocomplete="name"
+                    placeholder="Escribe tu nombre completo"
+                    required
+                >
 
-            <label for="telefono">Número de contacto</label>
-            <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    autocomplete="email"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
 
-            <label for="ambiente">Ambiente de formación</label>
-            <input type="text" id="ambiente" name="ambiente" required>
+                <label for="telefono">Número de contacto</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    autocomplete="tel"
+                    placeholder="Ejemplo: 3001234567"
+                    required
+                >
+            </fieldset>
 
-            <label for="tipo">Tipo de novedad</label>
-            <select id="tipo" name="tipo" required>
-                <option value="">Selecciona una opción</option>
-                <option value="equipo">Equipo</option>
-                <option value="mobiliario">Mobiliario</option>
-                <option value="infraestructura">Infraestructura</option>
-                <option value="otro">Otro</option>
-            </select>
+            <fieldset>
+                <legend>Información de la novedad</legend>
 
-            <label for="descripcion">Descripción de la novedad</label>
-            <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+                <label for="ambiente">Ambiente de formación</label>
+                <input
+                    type="text"
+                    id="ambiente"
+                    name="ambiente"
+                    placeholder="Ejemplo: Ambiente 101"
+                    required
+                >
 
-            <label for="evidencia">Evidencia (opcional)</label>
-            <input type="file" id="evidencia" name="evidencia" accept="image/*,.pdf">
+                <label for="fecha">Fecha de la novedad</label>
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    required
+                >
+
+                <label for="tipo">Tipo de novedad</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="equipo">Equipo</option>
+                    <option value="mobiliario">Mobiliario</option>
+                    <option value="infraestructura">Infraestructura</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Elementos afectados</legend>
+
+                <input type="checkbox" id="computador" name="elementos[]" value="computador">
+                <label for="computador">Computador</label>
+
+                <input type="checkbox" id="silla" name="elementos[]" value="silla">
+                <label for="silla">Silla</label>
+
+                <input type="checkbox" id="mesa" name="elementos[]" value="mesa">
+                <label for="mesa">Mesa</label>
+
+                <input type="checkbox" id="otro-elemento" name="elementos[]" value="otro">
+                <label for="otro-elemento">Otro</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Detalles del reporte</legend>
+
+                <label for="descripcion">Descripción de la novedad</label>
+                <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    rows="5"
+                    placeholder="Describe detalladamente el problema encontrado"
+                    required
+                ></textarea>
+
+                <label for="evidencia">Evidencia (opcional)</label>
+                <input type="file" id="evidencia" name="evidencia" accept="image/*,.pdf">
+            </fieldset>
 
             <button type="submit">Enviar reporte</button>
-            <br></br>
         </form>
     </main>
 </body>
